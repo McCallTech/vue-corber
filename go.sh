@@ -37,12 +37,12 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | b
 . ~/.nvm/nvm.sh; nvm i --lts;
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ##yarn install
+npm i -g yarn vue-cli corber cordova http-server
 vue init webpack vue
 cd vue
 git init; git add .; git commit -m "inital"
 sed -i "s%'/'%''%g" ./config/index.js
 touch vue.config.js
-npm i -g yarn ember-cli corber cordova http-server
 rm -rf corber
 corber init
 corber platform remove android
